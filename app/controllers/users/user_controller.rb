@@ -1,0 +1,3 @@
+class Users::UserController
+    
+end
