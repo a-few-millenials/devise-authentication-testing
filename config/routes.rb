@@ -5,9 +5,13 @@ Rails.application.routes.draw do
   devise_for :users, path: 'users', controllers: {
     sessions: "users/sessions"
   }
+  
   namespace :users do
-      resources :posts
-    end
+    resources :posts
+  end
+  namespace :admins do
+    resources :users
+  end
     
   scope module: 'users' do
     resources :profiles
