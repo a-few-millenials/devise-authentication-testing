@@ -1,1 +1,8 @@
 <h2>Testing!</h2>
+
+<%= form_with scope: :post, local: true do |form| %>
+    <p>
+        <%= form.label :post %><br>
+        <%= form.text_field :post %>
+    </p>
+<% end %>
