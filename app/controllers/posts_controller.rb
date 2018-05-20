@@ -1,2 +1,3 @@
-class PostsController < ApplicationController
+class Users::PostsController < ApplicationController
+
 end
