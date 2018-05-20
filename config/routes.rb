@@ -6,9 +6,12 @@ Rails.application.routes.draw do
     sessions: "users/sessions"
   }
   namespace :users do
-      resources :posts
-    end
-    
+    resources :posts
+  end
+  namespace :admins do
+    resources :users
+  end
+
   scope module: 'users' do
     resources :profiles
   end
