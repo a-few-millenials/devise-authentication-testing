@@ -11,7 +11,7 @@ module Accessible
             redirect_to(rails_admin.dashboard_path) && return
         elsif current_user
             flash.clear
-            redirect_to(authenticated_user_root_path) && return
+            redirect_to(rails_info_path) && return
         end
     end
 end
