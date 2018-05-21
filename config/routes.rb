@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root :to => 'admins/users#index'
+
   devise_for :admins, path: 'admins', controllers: {
     sessions: "admins/sessions"
   }
