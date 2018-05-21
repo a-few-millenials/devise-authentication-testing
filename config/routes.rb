@@ -3,9 +3,11 @@ Rails.application.routes.draw do
     sessions: "admins/sessions"
   }
   devise_for :users, path: 'users', controllers: {
-    sessions: "users/sessions"
-  }
-  
+    sessions: "users/sessions",
+  } do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+
   namespace :users do
     resources :posts
   end
