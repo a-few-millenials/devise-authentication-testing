@@ -9,7 +9,7 @@
         <th>Date Account Created</th>
         <th>Last IP Address</th>
     </tr>
-    <%= @users.each do |user| %>
+    <% @users.each do |user| %>
         <tr>
             <td><%= user.email %></td>
             <td><%= user.sign_in_count %></td>
