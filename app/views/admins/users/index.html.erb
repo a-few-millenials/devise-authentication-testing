@@ -1,1 +1,13 @@
-<h2>testing</h2>
+<h1>testing</h1>
+
+<h3>Here is a list of all users</h3>
+<table>
+    <tr>
+        <th>Email</th>
+    </tr>
+    <%= @users.each do |user| %>
+        <tr>
+            <td><%= user.Email %></td>
+        </tr>
+    <% end %>
+</table>
