@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   authenticated do
-    root :to => 'admins/users#index'
+    root :to => 'admins/users#index', as: :authenticated_root
   end
   unauthenticated do
     root :to => 'home#index'
@@ -11,9 +11,7 @@ Rails.application.routes.draw do
   }
   devise_for :users, path: 'users', controllers: {
     sessions: "users/sessions",
-  } do
-    get '/users/sign_out' => 'devise/sessions#destroy'
-  end
+  }
 
   namespace :users do
     resources :posts
