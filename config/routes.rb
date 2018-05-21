@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  authenticated do
+    root :to => 'admins/users#index', as: :authenticated
+  end
   root :to => 'home#index'
 
   devise_for :admins, path: 'admins', controllers: {
