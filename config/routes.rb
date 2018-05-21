@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   authenticated do
-    root :to => 'admins/users#index', as: :authenticated
+    root :to => 'admins/users#index'
   end
-  root :to => 'home#index'
+  unauthenticated do
+    root :to => 'home#index'
+  end
 
   devise_for :admins, path: 'admins', controllers: {
     sessions: "admins/sessions"
