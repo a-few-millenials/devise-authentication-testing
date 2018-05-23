@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  namespace :users do
+    get 'feed/index'
+  end
+
+  namespace :users do
+    get 'feed/new'
+  end
+
+  get 'feed/index'
+
+  get 'feed/new'
+
   root to: 'home#index'
 
   devise_for :admins, path: 'admins', controllers: {
