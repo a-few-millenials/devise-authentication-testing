@@ -1,8 +1,8 @@
 <h2>Social Media site!</h2>
 
 <% if user_signed_in? %>
-    <% link_to "Sign_out", destroy_user_session_path, method: :delete %>
+    <%= link_to "Sign_out", destroy_user_session_path, method: :delete %>
 <% elsif %>
-    <% link_to "Sign_in", new_user_session_path, method: :get %>
+    <%= link_to "Sign_in", new_user_session_path, method: :get %>
     Hello
 <% end %>
