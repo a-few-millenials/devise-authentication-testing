@@ -1,14 +1,6 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  namespace :users do
-    get 'feed/index'
-  end
-
-  namespace :users do
-    get 'feed/new'
-  end
-
   scope module: 'users' do
     resources :feed
   end
