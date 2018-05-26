@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'home#index'
+
   namespace :users do
     get 'feed/index'
   end
@@ -7,11 +9,9 @@ Rails.application.routes.draw do
     get 'feed/new'
   end
 
-  get 'feed/index'
-
-  get 'feed/new'
-
-  root to: 'home#index'
+  scope module: 'users' do
+    resources :feed
+  end
 
   devise_for :admins, path: 'admins', controllers: {
     sessions: "admins/sessions"
