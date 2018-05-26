@@ -11,7 +11,7 @@ module Accessible
             redirect_to(rails_admin.dashboard_path) && return
         elsif current_user
             flash.clear
-            redirect_to action: "index" && return
+            redirect_to action: "users/feed#index" && return
         end
     end
 end
