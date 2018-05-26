@@ -3,6 +3,5 @@ class Users::UserController < ApplicationController
     end
 
     def newPost
-
     end
 end
