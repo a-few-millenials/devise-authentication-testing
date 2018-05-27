@@ -4,5 +4,5 @@
     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 <% elsif %>
     <%= link_to "Sign in", new_user_session_path, method: :get %>
-    <p><%= link_to "Find Friends", users_path %></p>
+    <%= link_to "Find Friends", profiles_path, method: :get %>
 <% end %>
