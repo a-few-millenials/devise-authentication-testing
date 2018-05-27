@@ -4,4 +4,12 @@ class Users::UserController < ApplicationController
 
     def newPost
     end
+
+    def add_friend
+
+    end
+
+    def remove_friend
+
+    end
 end
