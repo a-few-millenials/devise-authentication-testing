@@ -20,8 +20,6 @@ Rails.application.routes.draw do
   end
     
   scope module: 'users' do
-    resources :profiles
+    resources :profiles, :friendships
   end
-
-  resources :friendships
 end
