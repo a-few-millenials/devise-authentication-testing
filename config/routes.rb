@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     resources :feed, :profiles
   end
 
-  resources :friendship
   get 'friendship/send_request' => 'friendship#send_request', :as => :send_request
   get 'friendship/accept_request' => 'friendship#accept_request', :as => :accept_request
 
