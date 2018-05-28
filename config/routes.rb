@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   scope module: 'users' do
-    resources :feed, :profiles
+    resources :feed, :profiles, :friendship
   end
 
   devise_for :admins, path: 'admins', controllers: {
