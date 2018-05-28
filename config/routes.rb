@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   scope module: 'users' do
-    resources :feed, :profiles, :friendship
+    resources :feed, :profiles
   end
+
+  resources :friendship
 
   devise_for :admins, path: 'admins', controllers: {
     sessions: "admins/sessions"
