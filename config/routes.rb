@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   scope module: 'users' do
-    resources :feed, :profiles
+    resources :profiles
   end
 
   get 'friendship/send_request' => 'friendship#send_request', :as => :send_request
   get 'friendship/accept_request' => 'friendship#accept_request', :as => :accept_request
-  get 'feed/friend_requests' => 'feed#friend_request', :as => :friend_request
+  get 'feed/friend_requests' => 'users/feed#friend_request', :as => :friend_request
 
   devise_for :admins, path: 'admins', controllers: {
     sessions: "admins/sessions"
