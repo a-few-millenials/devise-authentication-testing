@@ -7,6 +7,7 @@ class FriendshipController < ApplicationController
     end
 
     def accept_request
-
+        friendship = Friendship.where(accept_request: params[:user], send_request: params[:friend])
+        friendship.accepted = true
     end
 end
