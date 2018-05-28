@@ -7,5 +7,6 @@
 <% end %>
 
 <% if user_signed_in? %>
-    <%= link_to "Find Friends", profiles_path, method: :get %>
+    <%= link_to "Post", profiles_path, method: :get %>
+    <%= link_to "Find Friends", friend_request_path, method: :get%> 
 <% end %>
