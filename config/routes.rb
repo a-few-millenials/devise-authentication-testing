@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   end
 
   resources :friendship
+  get 'friendship/send_request' => 'friendship#send_request', :as => :send_request
+  get 'friendship/accept_request' => 'friendship#accept_request', :as => :accept_request
 
   devise_for :admins, path: 'admins', controllers: {
     sessions: "admins/sessions"
