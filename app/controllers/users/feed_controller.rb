@@ -4,4 +4,8 @@ class Users::FeedController < ApplicationController
 
   def new
   end
+
+  def friendRequests
+
+  end
 end
