@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
-  has_many :friendships
-  has_many :friends, :through => :friendships
+  has_and_belongs_to_many(:users,
+    :join_table => "friendships",
+    :foreign_key => "request_user_id"
+    :association_foreign_key => "accept_user_id")
+  end
 end
