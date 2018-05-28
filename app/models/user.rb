@@ -6,7 +6,6 @@ class User < ApplicationRecord
   
   has_and_belongs_to_many(:users,
     :join_table => "friendships",
-    :foreign_key => "request_user_id"
+    :foreign_key => "request_user_id",
     :association_foreign_key => "accept_user_id")
-  end
 end
