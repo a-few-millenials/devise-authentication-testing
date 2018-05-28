@@ -9,7 +9,7 @@ class Users::FeedController < ApplicationController
     users = User.join("INNER JOIN friendships ON users.id = friendships.request_user_id")
     users_array =  Array.new
     users.each do |u|
-      if u.request_user_id = NULL OR u.accepted = NULL
+      if u.request_user_id is NULL OR u.accepted is NULL
       else
         users_array.concat(u)
       end
