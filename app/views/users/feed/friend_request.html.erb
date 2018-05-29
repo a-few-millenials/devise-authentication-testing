@@ -5,8 +5,11 @@
         <th>Email</th>
     </tr>
     <% @Users.each do |user| %>
-        <tr>
-            <td><%= user.email %></td>
-        </tr>
+        <% if current_user.email == user.email %>
+        <% else %>
+            <tr>
+                <td><%= user.email %></td>
+            </tr>
+        <% end %>
     <% end %>
 </table>
