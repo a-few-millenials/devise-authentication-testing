@@ -8,4 +8,9 @@ class User < ApplicationRecord
     :join_table => "friendships",
     :foreign_key => "request_user_id",
     :association_foreign_key => "accept_user_id")
+
+  def self.get_friends
+    .joins("INNER JOIN friendships ON users.id = friendships.request_user_id")
+    .joins("INNER JOIN users ON friendships.accept_user_id = user.id")
+  end
 end
