@@ -3,6 +3,13 @@ class Users::UserController < ApplicationController
     end
 
     def newPost
+    end
+
+    def add_friend
+
+    end
+
+    def remove_friend
 
     end
 end

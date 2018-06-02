@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
+  scope module: 'users' do
+    resources :profiles
+  end
+
+  get 'friendship/send_request' => 'friendship#send_request', :as => :send_request
+  get 'friendship/accept_request' => 'friendship#accept_request', :as => :accept_request
+  get 'feed/friend_requests' => 'users/feed#friend_request', :as => :friend_request
+
   devise_for :admins, path: 'admins', controllers: {
     sessions: "admins/sessions"
   }
@@ -14,10 +22,4 @@ Rails.application.routes.draw do
   namespace :admins do
     resources :users
   end
-    
-  scope module: 'users' do
-    resources :profiles
-  end
-  
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

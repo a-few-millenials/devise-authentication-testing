@@ -33,6 +33,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # Use Bootstrap as Front-end Development kit
 gem 'bootstrap-sass'
+# Use MySQL2 as Database
+gem 'mysql2'
+#gem 'mysql'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
