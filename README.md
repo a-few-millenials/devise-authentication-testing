@@ -60,30 +60,61 @@ cd devise-authentication-testing
 bundle install
 ```
 
+This application is currently being built using MySQL as the database. However, Rails currently ships with sqlite3 if you want to use the default configuration.
+
+If you want to use sqlite3, use the following configuration
+```yml
+default: &default
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+```
+
+This is the current database development configuration in MySQL
+```yml
+default: &default
+  adapter: mysql2
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  encoding: utf8
+  reconnect: false
+  database: social-media-site_development
+  username: ******
+  password: ******
+  socket: /var/sun/mysqld/mysqld.sock
+```
+__**NOTE**__ You will need to install a version of MySQL server in order to use MySQL. You can download it [here](https://dev.mysql.com/downloads/mysql/)
+
+After you have your database configuration setup, input the following in any Command Line
+```cmd
+rails db:migrate
+rails server
+```
+
+Navigate to http://localhost:3000 and you should be good to go.
+***
+## Technologies used
+* Ruby on Rails v. 5.1.6
+* Devise v. 4.4.3
+* sqlite3 v. 3.x
+* MySQL
+* Currently experimenting with several front-end frameworks
+
+***
+## Known Bugs
+Here is a list of known bugs
+* No known bugs at this time (Is subject to change)
+
+## Support
+If you encounter any bugs or have any questions about this project in general, email the creator of this project.
+
+Hunter Parks: hunter.thomas.parks@gmail.com
+***
+
+## COPYRIGHT
+This project is licensed under the GPL license
+
+Copyright (c) 2018 **Hunter Parks**
+
 [1]: https://github.com/plataformatec/devise
 [2]: https://github.com/rails/rails
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
