@@ -36,6 +36,8 @@ gem 'bootstrap-sass'
 # Use MySQL2 as Database
 gem 'mysql2'
 #gem 'mysql'
+# Add React for Rails to project
+gem 'react-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
