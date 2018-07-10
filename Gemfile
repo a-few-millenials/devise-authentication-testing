@@ -41,6 +41,9 @@ gem 'devise'
 # Use Mysql as default db
 gem 'mysql2'
 
+# Add Rails-React to project
+gem 'react-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
