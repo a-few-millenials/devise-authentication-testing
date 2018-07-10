@@ -12,7 +12,9 @@
 //
 //= require rails-ujs
 //= require turbolinks
-// require_tree .
+//= require_tree .
 //= require react
 //= require react_ujs
+//= require jquery3
+//= require jquery_ujs
 //= require components

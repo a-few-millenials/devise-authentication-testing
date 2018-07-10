@@ -41,6 +41,7 @@ gem 'mysql2'
 # Add React for Rails to project
 gem 'react-rails'
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

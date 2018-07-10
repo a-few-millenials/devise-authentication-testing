@@ -4766,7 +4766,7 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@^16.4.1:
+react-dom@*, react-dom@^16.4.1:
   version "16.4.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.4.1.tgz#7f8b0223b3a5fbe205116c56deb85de32685dad6"
   dependencies:
@@ -4775,7 +4775,14 @@ react-dom@^16.4.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react@^16.4.1:
+react-rails-ujs@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-rails-ujs/-/react-rails-ujs-1.1.0.tgz#9b3cfe5d7e27ac56ed3be45f8a7b48b118c56ba5"
+  dependencies:
+    react "*"
+    react-dom "*"
+
+react@*, react@^16.4.1:
   version "16.4.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.4.1.tgz#de51ba5764b5dbcd1f9079037b862bd26b82fe32"
   dependencies:

@@ -1,10 +1,6 @@
 var Header = createReactClass({
-
   render: function() {
-    return (
-      <React.Fragment>
-      </React.Fragment>
-    );
+    return <h1>{this.props.title}</h1>
   }
 });
 

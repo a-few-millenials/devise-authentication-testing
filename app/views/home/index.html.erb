@@ -1,5 +1,7 @@
 <h2>Social Media site!</h2>
 
+<%= react_component("SiteHeader", { title: "This is a header" }) %>
+
 <% if user_signed_in? %>
     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 <% elsif %>
