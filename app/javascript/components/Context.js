@@ -4,7 +4,8 @@ class Context extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <span className="context-menu"></span>
+        {this.props.children}
+        Testing
       </React.Fragment>
     );
   }

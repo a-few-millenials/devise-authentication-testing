@@ -1,11 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Context from './Context'
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render () {
     return (
       <React.Fragment>
         <div className="header">
           {/*Title: {this.props.title} */}
+          <Context />
         </div>
       </React.Fragment>
     );
@@ -15,4 +20,5 @@ class Header extends React.Component {
 Header.propTypes = {
   title: PropTypes.string
 };
+
 export default Header
