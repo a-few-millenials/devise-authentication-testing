@@ -1,0 +1,16 @@
+$primary-color: #7EEB2A;
+$complimentary-color: #EE2A62;
+$secondary-color: #C523BE;
+$third-color: #C523BE;
+
+html, body, p { margin: 0; padding: 0; border: 0; outline: 0; }
+
+
+.header {
+    float: top;
+    background-color: $primary-color;
+    margin: 0px;
+    padding: 0px;
+    height: 30px;
+    border-bottom: 1px black solid;
+}

@@ -4,7 +4,9 @@ class Header extends React.Component {
   render () {
     return (
       <React.Fragment>
-        Title: {this.props.title}
+        <div className="header">
+          Title: {this.props.title}
+        </div>
       </React.Fragment>
     );
   }
