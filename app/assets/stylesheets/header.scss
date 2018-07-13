@@ -3,9 +3,10 @@ $complimentary-color: #EE2A62;
 $secondary-color: #C523BE;
 $third-color: #C523BE;
 
+// This is to normalize the styling of the header
 html, body, p { margin: 0; padding: 0; border: 0; outline: 0; }
 
-
+// Header / Top navigational bar styling
 .header {
     float: top;
     background-color: $primary-color;
