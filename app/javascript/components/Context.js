@@ -5,7 +5,7 @@ class Context extends React.Component {
     return (
       <React.Fragment>
         {this.props.children}
-        Testing
+        Menu
       </React.Fragment>
     );
   }
