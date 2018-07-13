@@ -5,7 +5,7 @@ class Header extends React.Component {
     return (
       <React.Fragment>
         <div className="header">
-          Title: {this.props.title}
+          {/*Title: {this.props.title} */}
         </div>
       </React.Fragment>
     );
