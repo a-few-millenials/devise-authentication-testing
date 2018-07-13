@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-class AuthenticationButton extends React.Component {
+class Context extends React.Component {
   render () {
     return (
       <React.Fragment>
@@ -9,4 +9,4 @@ class AuthenticationButton extends React.Component {
   }
 }
 
-export default AuthenticationButton
+export default Context
