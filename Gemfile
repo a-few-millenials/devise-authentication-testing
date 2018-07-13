@@ -44,6 +44,9 @@ gem 'mysql2'
 # Add Rails-React to project
 gem 'react-rails'
 
+# Add Normalize-Rails to project to make browsers render all elements more consistantly with modern standards
+gem 'normalize-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
