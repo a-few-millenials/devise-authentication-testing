@@ -10,7 +10,9 @@ class Header extends React.Component {
       <React.Fragment>
         <div className="header">
           {/*Title: {this.props.title} */}
-          <Context />
+          <div className="context-menu">
+            <Context />
+          </div>
         </div>
       </React.Fragment>
     );
