@@ -15,6 +15,7 @@ default: &default
   adapter: mysql2
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: 10.0.0.157
+  # host: 73.180.2.181
   port: 3306
   username: hunter
   password: March1501Survive
