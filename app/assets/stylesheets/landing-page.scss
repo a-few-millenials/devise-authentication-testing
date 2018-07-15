@@ -7,9 +7,25 @@
     left: 20%;
     height: 25%;
     width: 60%;
+
+    #sign-up, #sign-in {
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 10px;
+        height: 45%;
+        width: 25%;
+        margin-left: 15%;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .sign-up, .sign-in {
+        margin-top: 11%;
+        font-size: 25px;
+    }
+
+    #sign-up:hover, #sign-in:hover {
+        background-color: green;
+    }
 }
 
-.sign-in, .sign-up {
-    display: inline-block;
-    border: 1px solid black;
-}

@@ -9,9 +9,11 @@ class Button extends React.Component {
     return (
       <React.Fragment>
         {this.props.children}
-        <div className={this.props.Class}>
-          <a href={this.props.Link}>{this.props.Title}</a> 
-        </div>
+        <a href={this.props.Link} id={this.props.Class}>
+          <div className={this.props.Class} href={this.props.Link}>
+            {this.props.Title}
+          </div>
+       </a>
       </React.Fragment>
     );
   }
