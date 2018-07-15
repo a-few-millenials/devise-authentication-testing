@@ -9,14 +9,17 @@ class Button extends React.Component {
     return (
       <React.Fragment>
         {this.props.children}
-        <a href={this.props.Link}>{this.props.Title}</a> 
+        <div className={this.props.Class}>
+          <a href={this.props.Link}>{this.props.Title}</a> 
+        </div>
       </React.Fragment>
     );
   }
 }
 
 Button.propTypes = {
-  title: PropTypes.string,
-  link: PropTypes.string
+  Title: PropTypes.string,
+  Link: PropTypes.string,
+  Class: PropTypes.string
 };
 export default Button
