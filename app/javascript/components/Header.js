@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Context from './Context'
+import Logo from './Logo'
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -9,6 +10,7 @@ class Header extends React.Component {
     return (
       <React.Fragment>
         <div className="header">
+          <Logo />
           {/*Title: {this.props.title} */}
           <Context />
         </div>
