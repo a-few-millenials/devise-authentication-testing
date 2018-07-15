@@ -1,12 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 class Button extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render () {
     return (
       <React.Fragment>
         {this.props.children}
-        Title: {this.props.title}
-        Link: {this.props.link}
+        <a href={this.props.Link}>{this.props.Title}</a> 
       </React.Fragment>
     );
   }
