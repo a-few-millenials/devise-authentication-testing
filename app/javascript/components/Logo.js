@@ -4,6 +4,7 @@ class Logo extends React.Component {
   render () {
     return (
       <React.Fragment>
+        <img src="C:\Users\adria\Pictures\Logo.gif">
       </React.Fragment>
     );
   }
