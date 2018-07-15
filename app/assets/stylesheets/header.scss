@@ -4,7 +4,7 @@ $secondary-color: #C523BE;
 $third-color: #C523BE;
 
 // This is to normalize the styling of the header
-html, body, p, button{ margin: 0; padding: 0; border: 0; outline: 0; }
+html, body, p, button { margin: 0; padding: 0; border: 0; outline: 0; }
 
 // Header / Top navigational bar styling
 .header {
@@ -25,7 +25,7 @@ html, body, p, button{ margin: 0; padding: 0; border: 0; outline: 0; }
         text-align: center;
         font-family: Impact;
         color: white;
-        border: 1px black solid;
+        
     }
 
     .dropdown-list {
@@ -34,6 +34,23 @@ html, body, p, button{ margin: 0; padding: 0; border: 0; outline: 0; }
     }
     .dropdown-list-full {
         display: block;
+        width: 150px;
+        text-align: center;
+        font-family: Impact;
+        color: white;
+        border: 1px solid black;
+        padding: 0;
+    }
+
+    .dropdown-list-list {
+        padding: 0;
+    }
+
+    .dropdown-entry {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        list-style-type: none;
     }
     
     .context-button:hover, .context-button:focus {

@@ -21,8 +21,13 @@ class Context extends React.Component {
     return (
       <React.Fragment>
         {this.props.children}
-        <span className="context-menu" onClick={this.handleClick}>Menu</span>
-        <span className={this.state.active ? 'dropdown-list': 'dropdown-list-full'}><DropdownMenu /></span>
+        <span className="context-menu" onClick={this.handleClick}>
+          Menu
+          <span className={this.state.active ? 'dropdown-list-full': 'dropdown-list'}>
+            <DropdownMenu />
+          </span>
+        </span>
+        
       </React.Fragment>
     );
   }

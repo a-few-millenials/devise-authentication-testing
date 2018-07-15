@@ -12,9 +12,7 @@
   <body>
     <p class = "notice"><%= notice %></p>
     <p class = "alert"><%= alert %></p>
-    <div class = "top-navigation-bar">
-      <%= react_component("Header", { title: "Testing" }) %>
-    </div>
+    <%= react_component("Header", { title: "Testing" }) %>
     <div class = "container">
       <%= yield %>
     </div>
