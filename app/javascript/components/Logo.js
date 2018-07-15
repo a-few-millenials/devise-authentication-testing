@@ -6,7 +6,7 @@ class Logo extends React.Component {
     return (
       <React.Fragment>
         {this.props.children}
-        <img src={LogoPicture} />
+        <img className="logo" src={LogoPicture} />
       </React.Fragment>
     );
   }
