@@ -9,8 +9,10 @@ class LandingPage extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Button Title="Sign Up" Link="/users/sign_up" Class="sign-up" />
-        <Button Title="Sign In" Link="/users/sign_in" Class="sign-in" />
+        <div className="authentication">
+          <Button Title="Sign Up" Link="/users/sign_up" Class="sign-up" />
+          <Button Title="Sign In" Link="/users/sign_in" Class="sign-in" />
+        </div>
       </React.Fragment>
     );
   }
