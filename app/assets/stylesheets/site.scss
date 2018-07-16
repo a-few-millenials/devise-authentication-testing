@@ -11,7 +11,7 @@ $nth: nth($list, $imgKey);
     padding-right: 15%;
 }
 
-body {
+#intro {
     background-image: image-url('image_#{$nth}');
     background-size: cover;
 }

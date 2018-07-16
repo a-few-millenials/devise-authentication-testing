@@ -9,7 +9,7 @@ class LandingPage extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <div className="authentication">
+        <div className="authentication animated tada">
           <Button Title="Sign Up" Link="/users/sign_up" Class="sign-up" />
           <Button Title="Sign In" Link="/users/sign_in" Class="sign-in" />
         </div>
