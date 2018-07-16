@@ -13,7 +13,7 @@
     <p class = "notice"><%= notice %></p>
     <p class = "alert"><%= alert %></p>
     <% if user_signed_in? %>
-      <%= react_component("Header", { title: "Testing" }) %>
+      <%= react_component("Header/Header", { title: "Testing" }) %>
     <% end %>
     <div class = "container">
       <%= yield %>
