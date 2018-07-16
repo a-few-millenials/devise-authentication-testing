@@ -1,3 +1,8 @@
+$primary-color: #7EEB2A;
+$complimentary-color: #EE2A62;
+$secondary-color: #C523BE;
+$third-color: #C523BE;
+
 .authentication {
     border: 1px solid black;
     border-radius: 10px;
@@ -7,6 +12,7 @@
     left: 20%;
     height: 25%;
     width: 60%;
+    background-color: white;
 
     #sign-up, #sign-in {
         display: inline-block;
