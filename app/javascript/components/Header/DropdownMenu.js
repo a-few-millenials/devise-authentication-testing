@@ -7,7 +7,7 @@ class DropdownMenu extends React.Component {
         {this.props.children}
         <ul className="dropdown-list-list">
           <li className="dropdown-entry"><a href="#">Account Settings</a></li>
-          <li className="dropdown-entry"><a href="#">Log Out</a></li>
+          <li className="dropdown-entry"><a href="/users/sign_out">Log Out</a></li>
         </ul>
       </React.Fragment>
     );

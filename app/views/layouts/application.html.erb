@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <p class = "notice"><%= notice %></p>
+    <p class = "notice animated zoomOut"><%= notice %></p>
     <p class = "alert"><%= alert %></p>
     <% if user_signed_in? %>
       <%= react_component("Header/Header", { title: "Testing" }) %>

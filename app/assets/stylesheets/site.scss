@@ -20,3 +20,9 @@ body {
     background-image: image-url('image_#{$nth}');
     background-size: cover;
 }
+
+.notice {
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    position: fixed;
+}
