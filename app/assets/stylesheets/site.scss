@@ -2,7 +2,16 @@
 //
 // Should be used minimally
 
+$imgKey: random(4);
+$list: 1, 2, 3, 4;
+$nth: nth($list, $imgKey);
+
 .container {
     padding-left: 15%;
     padding-right: 15%;
+}
+
+body {
+    background-image: image-url('image_#{$nth}');
+    background-size: cover;
 }
