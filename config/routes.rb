@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'wall/index'
+
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   } do
