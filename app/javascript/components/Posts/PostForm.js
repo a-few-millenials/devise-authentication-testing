@@ -26,6 +26,7 @@ class PostForm extends React.Component {
             Image:
             <input type="image" value={this.state.value} onChange={this.handleChange} />
           </label>
+          <input type="submit" value="Submit" />
         </form>
       </React.Fragment>
     );
