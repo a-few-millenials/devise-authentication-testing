@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'wall/index'
+  get 'wall/new'
 
   devise_for :users, controllers: {
     sessions: 'users/sessions'
