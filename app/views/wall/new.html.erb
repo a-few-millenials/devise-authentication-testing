@@ -1,5 +1,5 @@
 <h1>Testing</h1>
-<%= react_component("Posts/PostForm") %>
+<!--<%= react_component("Posts/PostForm") %>-->
 <%= form_for @post, url: wall_index_url, html: { multipart: true } do |post| %>
     <%= post.file_field :image %>
     <%= post.submit %>
