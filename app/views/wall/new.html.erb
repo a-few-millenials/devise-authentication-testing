@@ -1,6 +1,15 @@
 <h1>Testing</h1>
 <!--<%= react_component("Posts/PostForm") %>-->
-<%= form_for @post, url: { :action=>"create", :controller=>"wall"}, html: { multipart: true } do |post| %>
-    <%= post.file_field :image %>
-    <%= post.submit %>
+<%= form_for @post, url: { :action=>"create", :controller=>"wall"}, html: { multipart: true } do |form| %>
+    <p>
+        <%= form.label :caption %>
+        <%= form.text_field :caption %>
+    </p>
+    <p>
+        <%= form.label :image %>
+        <%= form.file_field :image %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
 <% end %>
