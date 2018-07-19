@@ -1,4 +1,8 @@
 class FriendshipController < ApplicationController
+  def index
+    @users = User.all
+  end
+
   def send_request
     @user = current_user
     @friend = User.find(params[:friend])
