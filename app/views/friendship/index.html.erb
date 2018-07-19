@@ -1,3 +1,20 @@
-<% @users.each do |u| %>
-    <%= u.email %>
-<% end %>
+<table>
+    <tr>
+        <th>Email</th>
+        <th>Sign in Counter</th>
+        <th>Date Account Created</th>
+        <th>Last IP Address</th>
+    </tr>
+
+    <% @users.each do |u| %>
+        <tr>
+            <td><%= u.email %></td>
+            <td><%= u.sign_in_count %></td>
+            <td><%= u.created_at %></td>
+            <td><%= u.last_sign_in_ip %></td>
+            <td><%= link_to "Send Friend Request", friendship_send_request_path(:user => current_user, :friend => u)%></td>
+        </tr>
+    <% end %>
+
+</table>
+
