@@ -6,10 +6,12 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   } do
     get '/users/sign_out' => 'devise/sessions#destroy'
+    
   end
   
   resources :home
   resources :wall
+  resources :friendship
 
   root to: "home#index"
 end
