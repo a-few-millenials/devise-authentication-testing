@@ -4,8 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  scope :get_friends, -> { find_by_sql("SELECT * FROM users INNER JOIN friendship on users.id = friendship.request_user_id INNER JOIN ( SELECT * FROM users ) temp_users ON friendship.accept_userid = temp_users.id;")}
+
   has_and_belongs_to_many(:users,
-    :join_table => "friendships",
+    :join_table => "friendship",
     :foreign_key => "request_user_id",
     :association_foreign_key => "accept_user_id")
 
