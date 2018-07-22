@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 class FriendshipRequests extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       data: props.list,
     };
@@ -14,7 +15,7 @@ class FriendshipRequests extends React.Component {
         <ul>
           {
             this.state.data.map((user) => 
-              <li key={user.email}>
+              <li key={user.id}>
                 {user.email}
               </li>
             )

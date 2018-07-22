@@ -1,6 +1,8 @@
 class FriendshipController < ApplicationController
   def index
+    @user = current_user.id
     @users = User.all
+    @friendships = Friendship.find_requests(@user)
   end
 
   def send_request

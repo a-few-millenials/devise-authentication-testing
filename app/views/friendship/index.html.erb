@@ -1,3 +1,7 @@
+<% @friendships.each do |f| %>
+    <% f.accept_user_id %>
+<% end %>
+
 <table>
     <tr>
         <th>Email</th>
@@ -16,7 +20,6 @@
         </tr>
     <% end %>
 
-    <%= react_component("Friendship/FriendshipRequests", { list: @users }) %>
+    <%= react_component("Friendship/FriendshipRequests", { list: @friendships }) %>
 
 </table>
-
