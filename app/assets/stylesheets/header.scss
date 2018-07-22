@@ -2,12 +2,15 @@ $primary-color: #7EEB2A;
 $complimentary-color: #EE2A62;
 $secondary-color: #C523BE;
 $third-color: #C523BE;
+$font: Impact;
+$font-color: white;
 
 // This is to normalize the styling of the header
 html, body, p, button { margin: 0; padding: 0; border: 0; outline: 0; }
 
 // Header / Top navigational bar styling
 .header {
+    position: relative;
     float: top;
     background-color: $primary-color;
     margin: 0px;
@@ -16,16 +19,15 @@ html, body, p, button { margin: 0; padding: 0; border: 0; outline: 0; }
     border-bottom: 1px black solid;
 
     .context-menu {
-        position: relative;
-        float: right;
-        height: 80%;
+        position: absolute;
         width: 6%;
+        height: 80%;
+        right: 0%;
         padding-top: 5px;
         margin-right: 15%;
         text-align: center;
-        font-family: Impact;
-        color: white;
-        
+        font-family: $font;
+        color: $font-color;
     }
 
     .dropdown-list {
@@ -57,6 +59,17 @@ html, body, p, button { margin: 0; padding: 0; border: 0; outline: 0; }
     .logo {
         height: 100%;
         padding-left: 15%;
+    }
+
+    .friend-requests {
+        position: absolute;
+        height: 80%;
+        width: 25px;
+        right: 21%;
+        padding-top: 5px;
+        text-align: center;
+        font-family: $font;
+        color: $font-color;
     }
     
     .context-button:hover, .context-button:focus {
