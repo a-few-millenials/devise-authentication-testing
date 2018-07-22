@@ -18,8 +18,13 @@ class FriendRequests extends React.Component {
   render () {
     return (
       <React.Fragment>
-        {this.props.children}
-        <span className="friend-requests">F</span>
+        <div onClick={this.handleClick}>
+          {this.props.children}
+          <span className="friend-requests">F</span>
+          <div className={this.state.active ? 'friend-requests-full': 'friend-requests-none'}>
+            
+          </div>
+        </div>
       </React.Fragment>
     );
   }
