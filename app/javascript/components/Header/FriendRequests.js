@@ -1,9 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
-import ReactList from "react-list"
 class FriendRequests extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      active: false;
+    }
+  }
+
+  handleClick() {
+    const currentState = this.state.active;
+    this.setState({
+      active: !currentState
+    });
   }
 
   render () {
