@@ -11,7 +11,7 @@ class FriendRequestList extends React.Component {
   }
 
   componentDidMount() {
-    fetch("").then(res => res.json()).then(
+    fetch("/").then(res => res.json()).then(
       (result) => {
        this.setState({
          isLoaded: true,
