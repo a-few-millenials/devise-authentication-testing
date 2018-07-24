@@ -3,6 +3,8 @@ A social media site testing the functions and limitations of [Devise][1] and [Ru
 
 Designed and developed by [Hunter Parks][2]
 
+#### Currently in Development as of 07/23/2018
+
 ***
 ## Description
 This project is a Ruby on Rails project using the Devise Authentication gem.
