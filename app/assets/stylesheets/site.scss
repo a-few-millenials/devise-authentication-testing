@@ -6,16 +6,6 @@ $imgKey: random(4);
 $list: 1, 2, 3, 4;
 $nth: nth($list, $imgKey);
 
-body {
-    background-color: white;
-    background-image: none;
-}
-
-.container {
-    padding-left: 15%;
-    padding-right: 15%;
-}
-
 #intro {
     background-image: image-url('image_#{$nth}');
     background-size: cover;
