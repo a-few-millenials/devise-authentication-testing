@@ -4,29 +4,54 @@ import DropdownMenu from "./DropdownMenu"
 class Context extends React.Component {
   constructor(props) {
     super(props);
+
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.setChildRef = this.setChildRef.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.state = {
       active: false,
     };
   }
 
-  handleClick() {
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClick, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClick, false);
+  }
+
+  handleClick(e) {
+    if (!this.wrapperRef.contains(e.target) && !this.state.active) {
+      return;
+    } else if (this.childRef.contains(e.target)) {
+      return;
+    }
+
     const currentState = this.state.active;
     this.setState({
       active: !currentState
     });
   }
 
+  setWrapperRef(node) {
+    this.wrapperRef = node;
+  }
+
+  setChildRef(node) {
+    this.childRef = node;
+  }
+
   render () {
     return (
       <React.Fragment>
         {this.props.children}
-        <span className="context-menu" onClick={this.handleClick}>
+        <div className="context-menu" ref={this.setWrapperRef}>
           Menu
-          <span className={this.state.active ? 'dropdown-list-full': 'dropdown-list'}>
+          <div className={this.state.active ? 'dropdown-list-full': 'dropdown-list'} ref={this.setChildRef}>
             <DropdownMenu />
-          </span>
-        </span>
+          </div>
+        </div>
         
       </React.Fragment>
     );
