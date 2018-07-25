@@ -21,4 +21,10 @@ class FriendshipController < ApplicationController
     friendship.save
     redirect_to "/"
   end
+
+  def get_friend_requests
+    @user = current_user.id
+    @users = User.all
+    @friendships = User.find_requests(@user)
+  end
 end

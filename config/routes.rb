@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'friendship/send_request'
+  get 'friendship/get_friend_requests'
   post 'friendship/accept_request'
 
   devise_for :users, controllers: {
