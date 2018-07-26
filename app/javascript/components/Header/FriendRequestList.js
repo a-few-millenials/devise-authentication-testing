@@ -11,13 +11,15 @@ class FriendRequestList extends React.Component {
   }
 
   componentDidMount() {
-    fetch("/friendship/get_friend_requests").then(res => res.json()).then(
-      (result) => {
-       this.setState({
-         isLoaded: true,
-         items: result.items
-       }); 
-      },
+    fetch("http://localhost:3000/friendship/get_friend_requests")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            isLoaded: true,
+            items: result.items
+          }); 
+        },
       (error) => {
         this.setState({
           isLoaded: true,
@@ -35,25 +37,17 @@ class FriendRequestList extends React.Component {
       return <div>Loading...</div>
     } else {
       return (
-        <ul>
-          {items.map(item => (
-            <li key={item.id}>
-              {item.email}
-            </li>
-          ))}
-        </ul>
+        <React.Fragment>
+          <ul>
+            {items.map(item => (
+              <li key={item.id}>
+                {item.email}
+              </li>
+            ))}
+          </ul>
+        </React.Fragment>
       )
     }
-    return (
-      <React.Fragment>
-        {/*
-          Use Ajax to get list of Friend requests from current user
-
-          Put Ajax call into componentWillMount() method and pull array of users that have sent 
-          current user a friend request
-        */}
-      </React.Fragment>
-    );
   }
 }
 

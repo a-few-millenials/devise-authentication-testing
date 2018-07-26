@@ -25,6 +25,8 @@ class FriendshipController < ApplicationController
   def get_friend_requests
     @user = current_user.id
     @users = User.all
+    User.drop_friendship_table
+    User.create_friendship_table
     @friendships = User.find_requests(@user)
   end
 end
