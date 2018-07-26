@@ -9,6 +9,14 @@ class FriendRequests extends React.Component {
     }
   }
 
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClick, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClick, false);
+  }
+
   render () {
     return (
       <React.Fragment>
