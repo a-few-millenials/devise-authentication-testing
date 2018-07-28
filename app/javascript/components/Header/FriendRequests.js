@@ -16,23 +16,32 @@ class FriendRequests extends React.Component {
 
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClick, false);
+    console.log("Log: componentDidMount");
   }
 
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleClick, false);
+    console.log("Log: componentWillUnmount");
   }
 
   handleClick(e) {
+    console.log("Log: handleClick");
     if(!this.wrapperRef.contains(e.target) && !this.state.active) {
+      console.log("Log: handleClick | beginning of if statement");
       return;
     } else if (this.childRef.contains(e.target)) {
+      console.log("Log: handleClick | else if");
       return;
     }
+
+    console.log("Log: setState");
 
     const currentState = this.state.active;
     this.setState({
       active: !currentState
     });
+
+    console.log("Log: " + currentState);
   }
 
   setWrapperRef(node) {
@@ -46,11 +55,12 @@ class FriendRequests extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <div onClick={this.handleClick} ref={this.setWrapperRef}>
+        <div ref={this.setWrapperRef}>
           {this.props.children}
           <span className="friend-requests" ref={this.setWrapperRef}>F</span>
           <div className={this.state.active ? 'friend-requests-full': 'friend-requests-none'} ref={this.setChildRef}>
             <FriendRequestList />
+            {console.log("Button push here")}
           </div>
         </div>
       </React.Fragment>
