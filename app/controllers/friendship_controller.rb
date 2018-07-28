@@ -22,11 +22,25 @@ class FriendshipController < ApplicationController
     redirect_to "/"
   end
 
-  def get_friend_requests
-    @user = current_user.id
+  def get_friend_requests_old
+    @user = current_user
     @users = User.all
-    User.drop_friendship_table
     User.create_friendship_table
-    @friendships = User.find_requests(@user)
+    @friendships = User.find_requests(@user.id)
+
+    respond_to do |format|
+      format.js json: @friendships, status: :ok
+      format.html
+    end
+  end
+
+  def get_friend_requests
+    delete_temp_table = 'DROP TEMPORARY TABLE IF EXISTS temp_users;'
+    create_temp_table = 'CREATE TEMPORARY TABLE IF NOT EXISTS temp_users SELECT request_user_id FROM friendships INNER JOIN users ON friendships.accept_user_id = users.id WHERE users.id = 1'
+    get_friend_requests = 'SELECT * FROM temp_users INNER JOIN users ON temp_users.request_user_id = users.id;'
+
+    ActiveRecord::Base.connection.execute(delete_temp_table)
+    ActiveRecord::Base.connection.execute(create_temp_table)
+    @friendships = ActiveRecord::Base.connection.execute(get_friend_requests)
   end
 end

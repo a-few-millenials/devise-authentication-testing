@@ -1,18 +1,20 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "react-bootstrap"
+
 class FriendRequestList extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       error: null,
       isLoaded: false,
-      items: []
+      items: [],
     };
   }
 
-  componentDidMount() {
-    fetch("http://localhost:3000/friendship/get_friend_requests")
+  /* componentDidMount() {
+    fetch("friendship/get_friend_requests")
       .then(res => res.json())
       .then(
         (result) => {
@@ -28,10 +30,12 @@ class FriendRequestList extends React.Component {
         });
       }
     )
-  }
+    */
+  
+
 
   render () {
-    const { error, isLoaded, items } = this.state;
+    /*const { error, isLoaded, items } = this.state;
     if(error) {
       return <div>Error: {error.message}</div>
     } else if (!isLoaded) {
@@ -49,6 +53,13 @@ class FriendRequestList extends React.Component {
         </React.Fragment>
       )
     }
+  } */
+
+    return (
+      <React.Fragment>
+        
+      </React.Fragment>
+    )
   }
 }
 
