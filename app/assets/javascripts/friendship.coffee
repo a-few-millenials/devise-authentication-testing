@@ -3,5 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-    $.ajax(url: "/friendships/get_friend_requests").done (html) ->
-        console.log("testing")
+    $.ajax(url: "/friendship/get_friend_requests").done (html) ->
+        console.log(html)
