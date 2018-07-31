@@ -3,5 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-    $.ajax(url: "/friendship/get_friend_requests").done (html) ->
-        console.log(html)
+    $.ajax 'friendship/get_friend_requests',
+            type: 'GET'
+            dataType: 'json'
+            success: (data, textStatus, jqXHR) ->
+                    $('friend-request-list-full').append "#{data}"
+            error: (data, textStatus, jqXHR) ->
+                    console.log("Failed")
