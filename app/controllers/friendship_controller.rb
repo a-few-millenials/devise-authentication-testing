@@ -42,5 +42,9 @@ class FriendshipController < ApplicationController
     ActiveRecord::Base.connection.execute(delete_temp_table)
     ActiveRecord::Base.connection.execute(create_temp_table)
     @friendships = ActiveRecord::Base.connection.execute(get_friend_requests)
+
+    respond_to do |format|
+      format.json { render json: @friendships }
+    end
   end
 end

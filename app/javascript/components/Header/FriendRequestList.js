@@ -11,9 +11,9 @@ class FriendRequestList extends React.Component {
     return (
       <React.Fragment>
         {this.props.children}
-        <div className="friend-request-full-list">
-          <span>testing</span>
-        </div>
+        <ul className="friend-request-full-list">
+          
+        </ul>
       </React.Fragment>
     )
   }
